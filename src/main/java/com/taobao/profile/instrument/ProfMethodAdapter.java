@@ -45,6 +45,7 @@ public class ProfMethodAdapter extends MethodVisitor {
     /* (non-Javadoc)
      * @see org.objectweb.asm.MethodAdapter#visitCode()
      */
+    @Override
     public void visitCode() {
         this.visitLdcInsn(mMethodId);
         this.visitMethodInsn(INVOKESTATIC, "com/taobao/profile/Profiler", "Start", "(I)V", false);
@@ -54,6 +55,7 @@ public class ProfMethodAdapter extends MethodVisitor {
     /* (non-Javadoc)
      * @see org.objectweb.asm.MethodAdapter#visitLineNumber(int, org.objectweb.asm.Label)
      */
+    @Override
     public void visitLineNumber(final int line, final Label start) {
         MethodCache.UpdateLineNum(mMethodId, line);
         super.visitLineNumber(line, start);
@@ -62,6 +64,7 @@ public class ProfMethodAdapter extends MethodVisitor {
     /* (non-Javadoc)
      * @see org.objectweb.asm.MethodAdapter#visitInsn(int)
      */
+    @Override
     public void visitInsn(int inst) {
         switch (inst) {
             case Opcodes.ARETURN:

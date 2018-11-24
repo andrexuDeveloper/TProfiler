@@ -57,6 +57,9 @@ public class Profiler {
 			return;
 		}
 
+		System.out.println("start:"+methodId);
+
+
 		long startTime;
 		if (Manager.isNeedNanoTime()) {
 			startTime = System.nanoTime();
@@ -95,6 +98,8 @@ public class Profiler {
 			return;
 		}
 
+
+
 		long endTime;
 		if (Manager.isNeedNanoTime()) {
 			endTime = System.nanoTime();
@@ -123,10 +128,12 @@ public class Profiler {
 			if (Manager.isNeedNanoTime()) {
 				if (useTime > 500000) {
 					frameData[2] = useTime;
+					System.out.println("endTime:"+methodId+frameData);
 					thrData.profileData.push(frameData);
 				}
 			} else if (useTime > 1) {
 				frameData[2] = useTime;
+				System.out.println("endTime:"+methodId+frameData);
 				thrData.profileData.push(frameData);
 			}
 		} catch (Exception e) {

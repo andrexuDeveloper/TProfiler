@@ -73,7 +73,7 @@ public class Manager {
 	/**
 	 * 时间标记.当前时间大于开始时间小于结束时间,则可以profile. default:false 不可以profile
 	 */
-	private volatile boolean timeFlag = false;
+	private volatile boolean timeFlag = true;
 	/**
 	 * 开关标记.远程开始或结束的开关. default:true 打开状态
 	 */
@@ -81,7 +81,7 @@ public class Manager {
 	/**
 	 * profile标记.是否可以profile. default:false 不可以profile
 	 */
-	private volatile boolean profileFlag = false;
+	private volatile boolean profileFlag = true;
 
 	/**
 	 * 开始时间结束时间控制线程
