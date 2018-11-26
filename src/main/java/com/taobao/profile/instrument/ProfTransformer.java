@@ -92,7 +92,7 @@ public class ProfTransformer implements ClassFileTransformer {
             return classfileBuffer;
         }
         if (Manager.instance().isDebugMode()) {
-            System.out.println(" ---- TProfiler Debug: ClassLoader:" + loader + " ---- class: " + className);
+            System.out.println(" ---- TProfiler Debug: ClassLoader:" + loader + " ---- class: " + className +"  by ASM");
         }
 
         // 记录注入类数

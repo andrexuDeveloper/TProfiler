@@ -25,7 +25,7 @@ public class Main {
 	 * @param inst
 	 */
 	public static void premain(String args, Instrumentation inst) {
-		System.out.println("====load==========");
+		System.out.println(">>> ====load==========");
 		Manager.instance().initialization();
 		inst.addTransformer(new ProfTransformer());
 		Manager.instance().startupThread();
