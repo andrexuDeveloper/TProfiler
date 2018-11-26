@@ -17,6 +17,6 @@ The source code is available using the GPL version 2. We are actively looking fo
 
 1. 已在java 1.8 spring boot架构应用上run
 2. 屏蔽了对Mysql的注入，貌似有些问题。
-
-
+3. 欢迎加群交流：318830949
+3. 使用请注意一定要有流量访问，流量应该多点。
 
